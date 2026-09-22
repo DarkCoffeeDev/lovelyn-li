@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>LOVELYN · Capítulo Dos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pirata+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- INTRO -->
+  <div id="intro">
+    <div class="stars" id="stars"></div>
+    <div id="particles"></div>
+    <div class="intro-text-wrap">
+      <div class="intro-line" id="line1">Hay tesoros que solamente se encuentran una vez en la vida...</div>
+      <div class="intro-line" id="line2">Yo encontré el mío el día que te conocí.</div>
+      <div class="intro-line" id="line3">Bienvenida a tu isla, amor.</div>
+      <div style="height:120px;"></div>
+      <button id="start-btn">⚓ Comenzar aventura</button>
+    </div>
+  </div>
+
+  <!-- MAP -->
+  <div id="map-view">
+    <div class="ocean-layer">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+    <svg class="route-svg" viewBox="0 0 1000 600" preserveAspectRatio="none">
+      <path class="route-path" d="M150,120 Q400,60 500,180 Q600,300 850,150"></path>
+      <path class="route-path" d="M150,480 Q400,540 500,420 Q600,300 850,470"></path>
+    </svg>
+
+    <div class="map-scroll">
+    <div class="map-canvas">
+
+      <div class="sign sign--welcome">
+        <h2>Bienvenida Jocelyn ❤️</h2>
+        <p>Gracias por ser la aventura más bonita de mi vida.</p>
+      </div>
+      <div class="sign sign--music">
+        <div class="player-title"><h2>🎵 Nuestra Música</h2></div>
+        <p class="player-track" id="player-track">A Sky Full of Stars</p>
+        <p class="player-artist" id="player-artist">Coldplay</p>
+        <div class="player-bar"><div class="player-bar-fill" id="player-fill"></div></div>
+        <div class="player-times"><span id="player-time-current">0:00</span><span id="player-time-duration">0:00</span></div>
+        <div class="player-controls">
+          <span class="btn" id="player-prev">⏮</span>
+          <span class="play" id="player-play">▶</span>
+          <span class="btn" id="player-next">⏭</span>
+          <div class="eq" id="player-eq"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+      <div class="island" id="il-hero">
+        <div class="island-glow"></div>
+        <span class="straw-hat">👒</span>
+        <span class="emoji">❤️</span>
+        <div class="ribbon">Tú Eres Mi One Piece</div>
+        <p>El tesoro más valioso que encontré en este mar.</p>
+      </div>
+
+      <div class="island" id="il2">
+        <div class="island-glow"></div>
+        <span class="emoji">📜</span>
+        <div class="ribbon">Nuestra Historia</div>
+        <p>Desde el primer mensaje hasta hoy.</p>
+      </div>
+
+      <div class="island" id="il3">
+        <div class="island-glow"></div>
+        <span class="emoji">📖</span>
+        <div class="ribbon">Lovelyn II</div>
+        <p>La secuela de nuestro libro.</p>
+      </div>
+
+      <div class="island" id="il4">
+        <div class="island-glow"></div>
+        <span class="emoji">💌</span>
+        <div class="ribbon">101 Razones</div>
+        <p>Por las que te amo.</p>
+      </div>
+
+      <div class="island" id="il5">
+        <div class="island-glow"></div>
+        <span class="emoji">🎁</span>
+        <div class="ribbon">Sorpresas</div>
+        <p>Cartas y mensajes ocultos.</p>
+      </div>
+
+      <div class="island" id="il6">
+        <div class="island-glow"></div>
+        <span class="emoji">🎶</span>
+        <div class="ribbon">Nuestra Música</div>
+        <p>Las canciones de esta aventura.</p>
+      </div>
+
+      <div class="compass">🧭</div>
+      <div class="ship">⛵</div>
+      <div class="scroll-note scroll-note--left">No importa cuánto navegue, mi norte siempre serás tú. ❤️</div>
+      <div class="scroll-note scroll-note--right">Gracias por existir. ❤️</div>
+
+    </div>
+    </div>
+  </div>
+
+  <!-- DETAIL PANEL -->
+  <div id="panel-overlay">
+    <div id="panel">
+      <button id="panel-close">✕</button>
+      <h2 id="panel-title"></h2>
+      <p class="sub" id="panel-sub"></p>
+      <div class="body" id="panel-body"></div>
+    </div>
+  </div>
+  <!-- LIGHTBOX (memory gallery viewer) -->
+  <div id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-nav lightbox-nav--prev" id="lightbox-prev">‹</button>
+    <div class="lightbox-inner">
+      <div class="frame">
+        <img id="lightbox-img" src="" alt="Recuerdo">
+        <p class="cap" id="lightbox-cap"></p>
+      </div>
+    </div>
+    <button class="lightbox-nav lightbox-nav--next" id="lightbox-next">›</button>
+  </div>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
